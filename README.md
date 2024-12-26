@@ -1,17 +1,45 @@
-# 먼저 라이브러리 설치부터
-1. pip install -r requirements.txt
+# 해보려면
 
-- get_stock_data : 데이터셋 만들기
-- get_token : 한국증권API 토큰 발생
+## 1. 필수 라이브러리 설치
 
-데이터 만들고싶으면
-.env 파일에 아래 값 추가(한국증권 api 키 발급 받아야됨)
+```bash
+pip install -r requirements.txt
+```
+
+## 2. 주요 기능
+
+- **get_stock_data**: 데이터셋 생성 기능
+- **get_token**: 한국증권 API 토큰 생성 기능
+
+## 3. 데이터 생성 방법
+
+데이터를 생성하려면 `.env` 파일에 아래 내용을 추가해야 합니다. 한국증권 API 키를 발급받아 `APPKEY`와 `APPSECRET` 값을 입력하세요.
+
+```env
 KOREA_INVESTMENT_APPKEY=*******************
 KOREA_INVESTMENT_APPSECRET=*****************
+```
 
-만들어놓은 데이터셋 사용하려면
-- merged_5_years_data_cleaned.csv
+## 4. 기존 데이터셋 사용
 
-학습 코드
-- predict_neuralprophet : Neural Prophet
-- predict_prophet : Prophet
+생성된 데이터를 사용하지 않고 기존 데이터를 사용하려면 다음 파일을 참고하세요:
+
+- **merged_5_years_data_cleaned.csv**
+
+## 5. 학습 코드 실행
+
+### Neural Prophet 모델을 사용한 예측
+
+```bash
+python predict_neuralprophet.py
+```
+
+### Prophet 모델을 사용한 예측
+
+```bash
+python predict_prophet.py
+```
+
+---
+
+이 문서를 따라 프로젝트를 실행하고 데이터 생성 및 학습 과정을 진행하세요.
