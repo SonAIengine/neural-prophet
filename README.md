@@ -40,6 +40,3 @@ python predict_neuralprophet.py
 python predict_prophet.py
 ```
 
----
-
-이 문서를 따라 프로젝트를 실행하고 데이터 생성 및 학습 과정을 진행하세요.
